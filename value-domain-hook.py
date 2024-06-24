@@ -58,7 +58,7 @@ def main():
 
     if cmd == "REGEST":
         records = get_dns_record(domain)
-        records = records + f"\ntxt c{validation}"
+        records = records + f"\ntxt _acme-challenge {validation}"
 
         update_dns_record(domain, records)
         time.sleep(60)
